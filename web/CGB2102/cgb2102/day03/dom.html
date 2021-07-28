@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>JavaScript操作DOM树</title>
+		<!-- javascript脚本
+			document是js内置对象，浏览器直接支持，无需声明直接使用
+			.title定义好的，我们直接使用
+			展现：页面弹出框 window.alert( 内容 )；window对象可以不写
+			html顺序解析，遇到js直接执行了
+		 -->
+		<script>
+			document.title = "js真好玩"; 	//动态修改html标签值
+			
+			//alert( document.title );
+			//主流调试观察变量的值方式，不会在页面中直接展现，F12打开控制台
+			console.log( document.title );	//浏览器提供对象，log写日志
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

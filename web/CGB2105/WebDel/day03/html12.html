@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>测试js中的函数</title>
+		
+		<script type="text/javascript">
+			// 1、函数：具有一定特定功能的代码
+			function a(){//声明函数
+				var arr = [1,2,3,4,5,6,7,8,9,10];
+				var sum = 0;
+				for(var i=0;i<arr.length;i++){
+					sum += arr[i];
+				}
+				console.log("和："+sum);
+			}
+			a();//调用函数
+			var d = function(x,y){
+				console.log("x*y:"+(x*y));
+			}
+			d(2.9,7.0);
+			
+			//样式2
+			var b = function(){//定义无参函数
+				alert(100);
+			}
+			b();
+			
+			var c = function(x,y){//定义有参函数
+				alert("处理后："+(x+y));
+			}
+			c(3.5,7.0);
+			
+			// forin
+			var d = [45,23,89,09,34];
+			for (var i in d) {
+				console.log(i)
+			}
+			
+			// 4、定义并调用含参的有返回值的函数
+			var q = function(x,y){
+				return x-y;//将结果返回给调用值
+			}
+			alert("函数返回值："+q(3.4,9.8));
+			
+			function e(x,y){
+				return x+y+x;
+			}
+			console.log(e(23.3,0.001));
+			
+			// 练习：统计字符串中a字符出现的次数
+			var f = "akakakakakkkkaklalldldlalalal";
+			var g = "a";
+			var count = 0;
+			for (var i=0;i<f.length;i++){
+				if(g==(f.charAt(i))){
+					count++;
+				}
+			}
+			console.log("出现次数："+count);
+			
+			function t(r,y){
+				var count = 0;
+				for (var i=0;i<r.length;i++){
+					if(y==(r.charAt(i))){
+						count++;
+					}
+				}
+				return "结果："+count;
+			}
+			console.log(t(prompt("请输入需要判定的字符串"),prompt("判定元素")));
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

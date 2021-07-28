@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>菜单</title>
+		<style>
+			ul{
+				list-style: none; /* ul所有内容前面修饰点去掉 */
+			}
+			li{
+				float: left; /* float浮动，left，元素紧跟着不换行 */
+				margin-right: 10px; /* 外部空白，margin四周空白 */
+				background-color: #11ee66; /* 设置背景色 */
+				padding: 5px 10px 5px 10px;  /* 内部空白，上右下左，四周空白 */
+				border-radius: 5px; /* 圆角 */
+			}
+			li:hover{ /* 鼠标操作事件:拖动/移动/单击/双击,鼠标移入,移出后自动还原 */
+				background-color: #ee1166; /* 设置背景色 */
+			}
+			a{
+				text-decoration: none; /* 去掉a标签下划线修饰 */
+				color: white; /* 字体颜色白色 */
+			}
+		</style>
+	</head>
+	<body>
+		<!-- ul标签分组，li条目 -->
+		<ul>
+			<!-- a链接，href属性网站地址，target属性设置是否弹出 -->
+			<li><a href="https://www.w3school.com.cn/" target="_blank">W3school</a></li>
+			<li><a href="https://www.runoob.com/" target="_blank">菜鸟教程</a></li>
+			<li><a href="https://www.cnblogs.com/" target="_blank">博客园</a></li>
+			<li><a href="https://www.csdn.net/" target="_blank">CSDN</a></li>
+			<li><a href="https://segmentfault.com/" target="_blank">思否</a></li>
+		</ul>
+	</body>
+</html>

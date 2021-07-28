@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<!-- 1、导入vue.js -->
+		<script src="js/vue.js"></script>
+	</head>
+	
+	<body>
+		<!-- 2、渲染区域，插值表达式  View视图-->
+		<div id="app">{{msg}}</div>
+	</body>
+	
+	<!-- 3、创建Vue对象 -->
+	<script>
+		/*
+			参数js对象，Vue结构死的
+			el（element）挂载点
+			data 数据，data js对象（自定义）
+			Model数据
+		*/
+	   var data = {
+		   msg: "hello vue"
+	   }
+	   
+		var param = {
+			el: "#app",
+			data: data
+		}
+		var vm = new Vue(param);	//ViewModel Vue在加载时解析插值表达式
+	</script>
+</html>

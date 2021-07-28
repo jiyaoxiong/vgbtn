@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>测试js语句</title>
+		
+		<!-- 在HTML中嵌入js -->
+		<script type="text/javascript">
+			// 1、分支结构
+			// 练习1：判断a>10就弹1，否则弹0
+			// var a = prompt("请输入整数：3");
+			// if (a>10) {
+			// 	alert(1);
+			// } else{
+			// 	alert(0);
+			// }
+			
+			// 练:2
+			// var a = prompt("请输入您的成绩：")
+			// if(a>80&&a<=100){
+			// 	alert("优秀");
+			// }else if(a>60&&a<=80){
+			// 	alert("中等");
+			// }else if(a>=0&&a<=60){
+			// 	alert("不及格");
+			// }else{
+			// 	alert('输入有误');
+			// }
+			
+			// //练习3：闰年的判断
+			// var d = prompt("年份：");
+			// if ((d%4==0&&d%100!=0)||(d%400==0)) {
+			// 	alert("闰年");
+			// }else{
+			// 	alert("平年");
+			// }
+			
+			// 2、Switch case结构
+			// var a = parseInt(prompt("日期："))
+			// switch(a){
+			// 	case 1:console.log("周一");//在控制台输出结果
+			// 	case 2:alert("周二");break;
+			// 	case 3:alert("周三");break;
+			// 	case 4:alert("周四");break;
+			// 	case 5:alert("周五");break;
+			// 	case 6:alert("周六");break;
+			// 	case 7:alert("周天");break;
+			// }
+			
+			// 3、循环结构
+			// for(var i=1;i<=10;i++){
+			// 	console.log(i);
+			// }
+			
+			// var e = 0;//记录总和
+			// for(var i=0;i<=10;i++){
+			// 	e = e+i;
+			// 	console.log(e);
+			// }
+			
+			var g = 100000000;
+			var f = 0;
+			while(g>1){
+				g=g-(g/2);
+				f++;
+			}
+			console.log(f);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

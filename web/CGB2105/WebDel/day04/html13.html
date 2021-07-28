@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>测试js创建对象</title>
+		<script type="text/javascript">
+			// 1、创建对象方式1：
+			function Person(){};//声明对象
+			
+			var p1 = new Person();//创建对象
+			p1.name = "关宏宇";//设置属性
+			p1.age = 23;
+			p1.run = function(){//动态绑定函数
+				alert(this.name+":"+this.age);
+				
+			}
+			p1.run();//调用对象及方法
+			console.log(p1);
+			p1.eat = function(){
+				console.log("吃肉肉");
+			}
+			p1.eat();
+			
+			// 2、创建对象方式2
+			var p2 = {
+				"name":"熊大",
+				"age":3,
+				"addr":"熊熊乐园",
+				"hobby":"吃蜂蜜"
+			}
+			console.log(p2);
+			p2.eat = function(){
+				alert(this.name+"爱吃蜂蜜");
+			}
+			p2.eat();
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>按键触发</title>
+	</head>
+	<body>
+		<div id="app">
+			<h3>用户数据：{{num}}</h3><br>
+			<!-- v-on:keyup.enter="  " 通过enter键触发 -->
+			<input type="text" v-on:keyup.enter="addNum()" v-model="num2" />
+			<button @click="addNum">计算</button>
+		</div>
+		<!-- 1.导入JS文件 -->
+		<script src="../js/vue.js" type="text/javascript" charset="utf-8"></script>
+		
+		<!-- 3.创建VUE对象 -->
+		<script>
+			const APP = new Vue({
+				el: "#app",
+				data: {
+					num: 100,
+					num2: 0
+				},
+				methods:{
+					addNum(){
+						this.num += parseInt(this.num2)
+					}
+				}
+			})
+		</script>	
+	</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<h1>要求：页面上3个链接，淘宝，京东，拼多多</h1>
+		<h3>使用js访问a标签的href链接，文字内容</h3>
+		
+		<div>
+			<a name="tb" href="http://www.taobao.com" target="_blank">淘宝</a>
+			<a class="jd" href="http://www.jd.com" target="_blank">京东</a>
+			<a id="pdd" href="http://www.pinduoduo.com" target="_blank">拼多多</a>
+		</div>
+	</body>
+</html>
+<script>
+	//使用name属性方式
+	var tb = document.getElementsByName("tb")[0].href;
+	console.log(tb);
+	
+	//使用class属性方式
+	var jd = document.getElementsByClassName("jd")[0].href;
+	console.log(jd);
+	
+	//使用id属性方式（不是数组，是单个值）页面的id只能一个名字
+	var pdd = document.getElementById("pdd").href;
+	console.log(pdd);
+</script>

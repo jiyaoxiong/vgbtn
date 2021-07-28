@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>永和小票</title>
+		<!-- css 全局的样式配置，习惯的位置
+			body代表整个页面标签，修饰整个body中字体
+		 -->
+		<style>
+			body{		/* 标签是直接写的 */
+				font-size: 8px; /*字体的大小，8个像素*/
+				/* 一般去看一个元素位置，设置它的边线，调试完再去掉 */
+				border: 0px solid red;
+				width: 290px;
+			}
+			
+			.me{	 /* class属性公用 */
+				padding-left: 90px;
+			}
+			#please{
+				font-size: 22px; 
+				font-weight: bold;
+			}
+			
+			#billId{
+				font-size: 20px;
+			}
+			.billClass{
+				font-size: 20px;
+				color: green;
+			}
+		</style>
+	</head>
+	<body>
+		<div>顾客联</div>
+		<br/> <!-- html换行符 -->
+		
+		<div id="please">请您留意取餐账号单</div>
+		<div class="me">自取顾客联</div>
+		
+		<!-- 通过左边空白，用户感官是居左 -->
+		<div>永和大王（北三环西路店）</div>
+		<div>010-12345678</div>
+		
+		<div class="me">--结账单--</div>
+		<div id="billId" class="billClass">账单号：P123456</div>
+		<div>账单类型：堂食</div>
+		<div>人数：1</div>
+		<div>收银员：张静</div>
+		<div>开单时间：2021-03-09 07:09:09</div>
+		<div>结账时间：2021-03-09 07:10:10</div>
+		
+		<!-- 虚线 dashed：默认实线 solid，换线性 -->
+		<hr style="border: 1px dashed;"/>
+		
+		<!-- 表格：表头行tr/th，普通行tr，单元格td -->
+		<table border="0">
+			<tr>
+				<td width="30" align="middle">数量</td>
+				<td width="150" align="middle">品项</td>
+				<td width="50" align="center">金额</td>
+			</tr>
+			<tr>
+				<td valign="top">1</td>
+				<td>
+					玉米肉松蛋饼2P <br/>
+					1 X -- 玉米肉松蛋饼 <br/>
+					1 X -- 现磨豆浆（热/甜）
+				</td>
+				<td valign="top" align="right">8.00</td>
+			</tr>
+		</table>
+		
+		<hr style="border: 1px dashed;"/>
+		
+		<table border="0">
+			<tr>
+				<td width="40">合计</td>
+				<td width="192" align="right">8.00</td>
+			</tr>
+			<tr>
+				<td>微支付</td>
+				<td align="right">8.00</td>
+			</tr>
+		</table>
+		
+		<hr style="border: 1px dashed;"/>
+		<div>打印时间：2021-03-09 07:24:38</div>
+		<hr style="border: 1px dashed;"/>
+		
+		<div style="padding-top: 15px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;根据相关税法规定，电子发票的开票日期同网上申请电子发票的日期，如您需要当日的电子发票请务必在消费当日通过扫描下方二维码，根据指引步骤开具您的增值税电子普通发票。此二维码30天有效，扫描时请保持小票平整。</div>
+		
+		<!-- 相对路径访问图片 -->
+		<img width="120" src="image/qr.png" style="padding-left:90px;"/>
+		
+		<div>官网：www.yonghe.com.cn</div>
+		<div>加盟热线：86-21-12345678</div>
+		<br/><br/>
+	</body>
+</html>

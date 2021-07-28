@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>练习form表单</title>
+		<!-- <style type="text/css">
+			input[type='submit']{
+				background-color: blue;
+				color: aliceblue;
+				width: 45px;
+				height: 30px;
+				border: 1px dashed blue;
+				border-radius: 5px;
+			}
+			input[type='button']{
+				background-color: hotpink;
+				color: aliceblue;
+				width: 45px;
+				height: 30px;
+				border: 1px dashed hotpink;
+				border-radius: 5px;
+			}
+			/* 选中class=a的元素 */
+			.a{
+				/* margin: 10px 10px 10px 0px; */
+				width: 200px;
+				height: 30px;
+			}
+		</style> -->
+		
+		<!-- 引入外部css文件
+			rel的值是固定的写法，表明了文件的类型
+			href用来指定文件位置的路径
+		 -->
+		<link rel="stylesheet" href="model.css"/>
+		
+	</head>
+	<body>
+		<!-- 默认的数据提交是get方式 -->
+		<form>
+			<table>
+				<tr>
+					<td>
+						<h3>学生信息管理系统MIS</h3>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						姓名：
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<input type="text" class="a" placeholder="请输入姓名" name="user" />
+					</td>
+				</tr>
+				<tr>
+					<td id="age">
+						年龄：
+					</td>
+				</tr>
+				<tr>
+					<td >
+						<input type="number" class="a" placeholder="请输入年龄" name="age" />
+					</td>
+				</tr>
+				<tr>
+					<td>
+						性别：(单选框) 
+						<input type="radio" name="sex" value="1" checked="checked"/>男
+						<input type="radio" name="sex" value="0"/>女
+					</td>
+				</tr>
+				<tr>
+					<td>
+						爱好：(多选) 
+						<input type="checkbox" name="like" value="1" checked="checked"/>乒乓球
+						<input type="checkbox" name="like" value="2"/>爬山 
+						<input type="checkbox" name="like" value="3" checked="checked"/>唱歌
+					</td>
+				</tr>
+				<tr>
+					<td>
+						学历：(下拉框) 
+						<select name="edu">
+							<option value="1">本科</option>
+							<option value="2">专科</option>
+							<option value="3">高中</option>
+							<option value="4">小学</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						入学日期： <br/>
+						<input type="date" name="time"/>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<input type="submit" value="保存" />
+						<input type="button" value="取消" />
+					</td>
+				</tr>
+				
+			</table>
+		</form>
+		
+	</body>
+</html>

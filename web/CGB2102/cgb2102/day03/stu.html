@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>学生信息管理系统</title>
+		<!-- 引入外部样式表文件
+			rel 指定文件类型 stylesheet指css文件
+			href css文件链接
+			习惯：css目录，
+		 -->
+		<link rel="stylesheet"
+			href="bootstrap.min.css"
+		/>
+	</head>
+	<body>
+		<!-- 习惯把body里的所有内容放在一个div中，方便整体修饰 -->
+		<div class="container">
+			
+		<!-- 表单组件，action提交的链接地址（后端java，Controller）
+			 method="get/post"，默认get请求
+		 -->
+		<form action="studentController" method="get">
+			<h1>学生信息管理系统</h1>
+			
+			<div class="form-group">
+				<label>姓名：</label>
+				<!-- 文本输入框，起名和其他组件区别，name+id都设置 
+					autocomplete属性on（记录以前你输入内容）、off 关闭就没提示
+					placeholder 信息提示，不会录入，是空的时才展示
+				-->
+				<input type="text" class="form-control" 
+				 autocomplete="off" 
+				 placeholder="请输入姓名..."
+				 name="name" id="name" />
+			</div>
+			
+			<div class="form-group">
+				<label>年龄：</label>
+				<!-- 数字输入框，只能输入数字 -->
+				<input type="number"
+				 class="form-control"
+				 placeholder="请输入年龄..."
+				 name="age" id="age"/>
+			</div>
+			
+			<div class="form-group">
+				<label>性别：</label>
+				<!-- 单选框, 必须名称一致，自动会变成一组
+					单选框修饰，和汉字不换行，radio-inline，inline在一行
+				 -->
+				<label class="radio-inline">
+					<input class="" type="radio" name="sex" id="sex" value="男"/>男
+				</label>
+				<label class="radio-inline">
+					<input type="radio" name="sex" id="sex" value="女"/>女
+				</label>
+			</div>
+			
+			<div class="form-group">
+				<label>爱好：</label>
+				<!-- 多选框，多个名字相同，自动变成一个组，后台接收是一个数组
+					打勾就传递后台，不打勾不传递
+				 -->
+				<label class="checkbox-inline">
+					<input type="checkbox" name="hobby" id="hobby" value="乒乓球"/> 乒乓球
+				</label>
+				<label class="checkbox-inline">
+					<input type="checkbox" name="hobby" id="hobby" value="爬山"/> 爬山
+				</label>
+				<label class="checkbox-inline">
+					<input type="checkbox" name="hobby" id="hobby" value="唱歌"/> 唱歌
+				</label>
+			</div>
+			
+			<div class="form-group">
+				<label>学历：</label>
+				<!-- 下拉框（单个值），选中中文，本质数字
+					1-小学，2-初中，3-高中，4-大专，5-本科
+				-->
+				<select name="edu" class="form-control" id="edu">
+					<option value="1">小学</option>
+					<option value="2">初中</option>
+					<option value="3">高中</option>
+					<option value="4">大专</option>
+					<option value="5">本科</option>
+				</select>
+			</div>
+			
+			<div class="form-group">
+				<!-- 按钮有两种形式，普通按钮button，
+					提交submit，自动提到form.action指定url链接 studentController
+					class配置一个值，两个值，中间用空格隔开
+				-->
+				<input class="btn btn-success" type="submit" name="btnSave" value="保存"/>
+				<button class="btn btn-danger" type="button" name="btnClear">取消</button>
+			</div>
+		</form>
+		</div>
+	</body>
+</html>

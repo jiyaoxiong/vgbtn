@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="../res/jquery-1.8.3.min.js"></script>
+	<script>
+		$(function(){//文档就绪事件
+			$.ajax({ //发起Ajax请求数据
+				type: "POST",
+				url: "https://p.3.cn/prices/mgets",
+				contentType: "application/json;charset=utf-8",
+				data: {		//拼接的参数
+					"skuIds": "J_100003717483"
+				},
+				dataType: "jsonp",
+				success: function(data) {	//返回的结果
+				console.log(data)
+//[{"cbf":"0","id":"J_100003717483","m":"10000.00","op":"2499.00","p":"2099.00"}]
+					$('#p1').text("返回数据：" + JSON.stringify(data));
+					$('#p2').text("商品编号：" + data[0].id);
+					$('#p3').text("商品价格： " + data[0].op);
+				},
+				error: function(data) {
+					alert("提交失败" + JSON.stringify(data));
+				}
+			});
+		});
+
+	</script>
+</head>
+<body>
+	<p id="p1">这是p1</p>
+	<p id="p2">这是p2</p>
+	<p id="p3">这是p3</p>
+</body>
+</html>

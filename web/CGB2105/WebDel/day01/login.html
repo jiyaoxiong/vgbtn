@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>用户注册</title>
+		<style type="text/css">
+		
+			/* 统一网页风格 */
+			body{
+				font-family: "宋体";/* 统一字体 */
+				font-size: 15px;/* 统一字号 */
+				width: 500px;/* 统一宽度 */
+				padding-left: 100px;/* 设置左边距 */
+			}
+			
+			/* 修饰所有的input的样式 */
+			.a{
+				height: 20px;/* 高度 */
+				width: 300px;/* 宽度 */
+				padding: 15px;/* 调整内容和边框的距离,内边距 */
+				font-size:20px ;/* 字号变大 */
+				margin: 10px;/* 调整盒子间的距离,外边距 */
+			}
+			
+			/* 修饰所有的提示信息 */
+			.xiao{
+				font-size: 8px;/* 字体变小 */
+				color: grey;/* 字的颜色 */
+				padding-left: 30px;/* 左边距 */
+			}
+			
+			/* 修饰同意 */
+			#note{
+				height: 60px;/* 高度 */
+				text-indent: 40px;/* 首行缩进 */
+				font-size: 12px;/* 字号变大 */
+			}
+			
+			/* 修饰立即注册 */
+			#btn{
+				background-color: #E64346;/* 背景色 */
+				font-size: 25px;/* 字号变大 */
+				color: white;/* 字的颜色 */
+				width: 360px;/* 设置宽度 */
+				height: 50px;/* 设置高度 */
+				border: #E64346;/* 设置边框 */
+			}
+		</style>
+	</head>
+	<body>
+		<form >
+			<table >
+				<tr>
+					<h1 style="padding-left: 130px;font-size:30px;">用户注册</h1>
+				</tr>
+				<tr>
+					<td>
+						<input type="text" name="name" id="name" placeholder="用户名" class="a"/>
+					</td>
+				</tr>
+				<tr>
+					<td class="xiao">
+						支持中文、字母、数字、“-”、“_”的组合，4-20个字符
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<input type="password" name="password" id="password" placeholder="设置密码" value="password" class="a"/>
+					</td>
+				</tr>
+				<tr>
+					<td class="xiao">
+						建议使用数字、字母和符号两种以上的组合，6-20个字符
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<input type="password" name="repassword" id="repassword" placeholder="确认密码" value="repassword" class="a"/>
+					</td>
+				</tr>
+				<tr>
+					<td class="xiao">
+						两次密码输入不一致
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<input type="number" name="phone" id="phone" placeholder="验证手机" value="phone" class="a" />或
+					<a href="#">验证邮箱</a>
+				</tr>
+				<tr >
+					<td id="note">
+						<input type="checkbox" />
+						我已经阅读并同意
+						<a href="#">《京淘用户协议》</a>
+					</td>
+					
+				</tr>
+				<tr>
+					<td>
+						<input type="submit" id="btn" value="立即注册" />
+					</td>
+				</tr>
+			</table>
+			
+		</form>
+	</body>
+</html>

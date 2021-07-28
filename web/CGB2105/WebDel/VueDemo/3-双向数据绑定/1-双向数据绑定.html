@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>数据显示</title>
+	</head>
+	<body>
+		<div id="app">
+			<!-- 双向数据绑定 v-model
+				1.数据端---页面
+				2.页面-----数据
+			   -->
+			<input name="msg" v-model="msg"/><br>
+			{{msg}}
+			
+		</div>
+		<!-- 1.导入JS文件 -->
+		<script src="../js/vue.js"></script>
+		
+		<!-- 3.创建VUE对象 -->
+		<script>
+			const APP = new Vue({
+				el: "#app",
+				data: {
+					msg: "数据随时修改"
+				}
+			})
+		</script>	
+	</body>
+</html>
+

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>使用jQuery禁止按钮</title>
+		<script src="js/jquery.min.js"></script>
+	</head>
+	<body>
+		<button id="zfb">支付宝支付</button>
+		<button id="wx">微信支付</button>
+	</body>
+	<script>
+		//直接在标签上写事件，前期绑定事件（写死，静态）
+		//点击按钮来操作，禁止按钮，修改按钮内容
+		function pay(){
+			//禁止按钮，jQuery规范：对象prop属性值，支持true/false
+			$("#zfb").prop("disabled", true);
+		}
+		
+		//新的jQuery提供方式，后期绑定事件（动态），可以针对自己的按钮写自己事件
+		//后期绑定事件会把前期设置事件覆盖掉，之前写的事件就不生效了
+		$("#zfb").click(function(){
+			//js代码，代表对象自身this,jQuery $(this),this代表window对象
+			$(this).prop("disabled", true);
+			
+			//支付宝文字
+			$(this).text("支付宝支付-已支付，请稍后...");
+		});	//参数是一个匿名函数
+		
+		//通过后期绑定方式，单独给微信按钮绑定事件
+		$("#wx").click(function(){
+			//链式编程
+			$(this).prop("disabled", true).text("微信支付-已支付，请稍后...");
+		});
+	</script>
+</html>

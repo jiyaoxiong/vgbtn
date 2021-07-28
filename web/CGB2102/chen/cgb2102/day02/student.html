@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>学生信息管理系统</title>
+	</head>
+	<body>
+		<!-- 表单组件，action提交的链接地址（后端java，Controller）
+			 method="get/post"，默认get请求
+		 -->
+		<form action="studentController" method="get">
+			<h1>学生信息管理系统</h1>
+			
+			<div>
+				<label>姓名：</label>
+				<!-- 文本输入框，起名和其他组件区别，name+id都设置 -->
+				<input type="text"  name="name" id="name" />
+			</div>
+			
+			<div>
+				<label>年龄：</label>
+				<!-- 数字输入框，只能输入数字 -->
+				<input type="number" name="age" id="age"/>
+			</div>
+			
+			<div>
+				<label>性别：</label>
+				<!-- 单选框, 必须名称一致，自动会变成一组 -->
+				<input type="radio" name="sex" id="sex" value="男"/>男
+				<input type="radio" name="sex" id="sex" value="女"/>女
+			</div>
+			
+			<div>
+				<label>爱好：</label>
+				<!-- 多选框，多个名字相同，自动变成一个组，后台接收是一个数组
+					打勾就传递后台，不打勾不传递
+				 -->
+				<input type="checkbox" name="hobby" id="hobby" value="乒乓球"/> 乒乓球
+				<input type="checkbox" name="hobby" id="hobby" value="爬山"/> 爬山
+				<input type="checkbox" name="hobby" id="hobby" value="唱歌"/> 唱歌
+			</div>
+			
+			<div>
+				<label>学历：</label>
+				<!-- 下拉框（单个值），选中中文，本质数字
+					1-小学，2-初中，3-高中，4-大专，5-本科
+				-->
+				<select name="edu" id="edu">
+					<option value="1">小学</option>
+					<option value="2">初中</option>
+					<option value="3">高中</option>
+					<option value="4">大专</option>
+					<option value="5">本科</option>
+				</select>
+			</div>
+			
+			<div>
+				<!-- 按钮有两种形式，普通按钮button，
+					提交submit，自动提到form.action指定url链接 studentController
+				-->
+				<input type="submit" name="btnSave" value="保存"/>
+				<button type="button" name="btnClear">取消</button>
+			</div>
+		</form>
+	</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>入门案例</title>
+	</head>
+	<body>
+		<!-- 
+			步骤：
+			1、导入Vue.js文件 html下部编辑
+			
+		 -->
+		<div id="app">
+			<h1>{{msg}}</h1>
+		</div>
+		
+		<script src="../js/vue.js" type="text/javascript" charset="utf-8"></script>
+		
+		<script>
+		/* 
+		 语法：
+		 1、const 定义常量
+		 2、let：作用和var类似，有作用域的概念
+		 3、var：无作用域
+		 
+		 */
+			const APP = new Vue({
+				//1、指定区域
+				el: "#app",
+				//2、定义属性
+				data: {
+					//k:v
+					msg: "Hello,Vue"
+				}
+			})
+		</script>
+	</body>
+</html>

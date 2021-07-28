@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>学生信息管理系统</title>
+		<link rel="stylesheet"
+			href="bootstrap.min.css"
+		/>
+	</head>
+	<body >
+		<div class="container">
+			<form action="http://localhost:8080/stu/add" method="post">
+				<h1>学生信息管理系统MIS</h1>
+				
+				<div  class="form-group">
+					<label>姓名：</label>
+					<input type="text" 
+					class="form-control" 
+					autocomplete="off" 
+					name="name" id="name" 
+					placeholder="请输入姓名..." />
+				</div>
+				
+				<div class="form-group">
+					<label>年龄：</label>
+					<input type="number" 
+					class="form-control"
+					name="age" id="age" value="age" 
+					placeholder="请输入年龄..." />
+				</div>
+				
+				<div class="form-group">
+					<label>性别：（单选框）</label>
+					<label class="radio-inline">
+						<input type="radio" name="sex" id="sex" value="男" />男
+					</label>
+					<label class="radio-inline">
+						<input type="radio" name="sex" id="sex" value="女" />女
+					</label>
+				</div>
+				
+				<div class="form-group">
+					<label>爱好：（多选）</label>
+					<label class="checkbox-inline">
+						<input type="checkbox" name="hobby" id="hobby" value="乒乓球"/>乒乓球
+					</label>
+					<label class="checkbox-inline">
+						<input type="checkbox" name="hobby" id="hobby" value="爬山"/>爬山
+					</label>
+					<label class="checkbox-inline">
+						<input type="checkbox" name="hobby" id="hobby" value="唱歌"/>唱歌
+					</label>
+				</div>
+				
+				<div class="form-group">
+					<label>学历：（下拉框）</label>
+					<select name="stu" class="form-control" id="stu">
+						<option value="小学">小学</option>
+						<option value="中学">中学</option>
+						<option value="大专">大专</option>
+						<option value="本科">本科</option>
+						<option value="研究生">研究生</option>
+					</select>
+				</div>
+				
+				<div class="form-group">
+					<label>入学日期：</label>
+					<label class="checkbox-inline">
+						<input type="date" name="intime" id="date"/>
+					</label>
+				</div>
+				
+				<div class="form-group">
+					<input class="btn btn-success" type="submit" name="submit" id="submit" value="提交" />
+					<input class="btn btn-danger" type="button" name="button" id="button" value="取消" />
+				</div>
+			</form>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>数据显示</title>
+	</head>
+	<body>
+		<div id="a">
+			<h3>SLKDJL</h3>
+			<h1>{{msg}}</h1>
+			<!-- v-test指令：如果页面没有渲染完成，则不显示信息 -->
+			<h1 v-text="msg"></h1>
+			<!-- 2、v-html:直接渲染html标签 -->
+			<div v-html="h3Html"></div>
+			<!-- 3、v-pre:跳过预编译 -->
+			<div v-pre>{{msg}}</div>
+			<!-- 4、v-once:只渲染一次 -->
+			<div v-once>{{once}}</div>
+		</div>
+		
+		<script src="../js/vue.js" type="text/javascript" charset="utf-8"></script>
+		
+		<script type="text/javascript">
+			const APP = new Vue({
+				el: "#a",
+				data: {
+					msg: "hello",
+					h3Html: "<H3>h3html渲染</H3>",
+					once: "我只能被渲染一次"
+ 				}
+			})
+		</script>
+		
+	</body>
+</html>

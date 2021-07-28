@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>h5播放音频和视频文件</title>
+	</head>
+	<body>
+		<!-- 播放音频 audio标签
+			两个参数：
+			controls 播放控制台，是否展现，不写这个属性就不展现
+			src 源文件，音频文件（支持常见的）mp3/m4a
+				两种方式：
+				1）直接播放网上内容：http://.../amp3 绝对路径
+				2）播放本地内容: audio/a.mp3 相对路径
+		 -->
+		<audio controls="controls"
+		 src="http://act.codeboy.com/doc/consultation/audio/1.m4a"></audio>
+		 
+		 <audio controls="controls" src="audio/10.m4a"></audio>
+		
+		<!-- 播放视频 -->
+		<video controls="controls" 
+			src="http://act.codeboy.com/tools/mp4/stu/2008-04.mp4"
+			width="200"
+		></video>
+		
+		<video controls="controls"
+			src="audio/达内三分钟介绍.mp4"
+			width="200"
+		></video>
+	</body>
+</html>

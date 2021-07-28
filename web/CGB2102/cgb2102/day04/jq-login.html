@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>模拟用户登录</title>
+		<link rel="stylesheet" href="css/bootstrap.min.css"/>
+		<!-- 引入第三方样式之外，还可以自己再定义样式，覆盖 -->
+		<style>
+			/* 设置页面宽度，不能直接设置body，设置container */
+			.container{
+				width: 300px;
+			}
+		</style>
+		
+		<!-- 导入外部js文件  type="text/javascript" 已经不需要写了 -->
+		<script src="js/jquery.min.js"></script>
+	</head>
+	<body>
+		<form method="get" action="loginController">
+		<div class="container">
+			<h3>用户登录</h3>
+			
+			<!-- 展示区域，登录成功信息，先隐藏 -->
+			<div id="msg"
+			 style="display: none;background-color: #008000;margin: 10px;">123</div>
+			
+			<div class="form-group">
+				<label>用户名：</label>
+				<input type="text" class="form-control"
+				 autocomplete="off"
+				 placeholder="请输入用户名..."
+				 name="username" id="username"/>
+			</div>
+			<div class="form-group">
+				<label>密码：</label>
+				<input type="password" class="form-control"
+				 placeholder="请输入密码..."
+				 name="password" id="password"/>
+			</div>
+			<div>
+				<button type="submit">提交</button>
+				<!-- 给按钮绑定事件onclick单击事件，写函数名，加上() -->
+				<button id="btnSubmit" onclick="doSubmit()" class="btn btn-success">登录</button>
+				<button id="btnClear" onclick="doClear()" class="btn btn-danger">清空</button>
+			</div>
+		</div>
+		</form>
+	</body>
+	
+	<script>
+		//怎么定义函数doSubmit
+		function jsdoSubmit(){
+			//获取用户名框内容
+			var username = document.getElementById("username");  //代表了input用户名输入框
+			
+			//打印到控制台
+			//console.log(username);			//对象
+			console.log(username.value);	//属性值
+			
+			//获取密码
+			var password = document.getElementById("password");
+			console.log(password.value);
+			
+			//获取到msg框，设置它新值，展示msg框，设置新颜色：红色
+			var msg = document.getElementById("msg");
+			//div和input获取值语法不同：注意
+			msg.innerText = username.value + "，登录成功";   //内部文字
+			
+			//改变msg样式，设置style属性，展示msg框(重新定义样式，会把老的样式覆盖) margin外部空白，padding内部空白
+			msg.style = 
+			"display: block; color: white; background-color: #008000;margin: 10px;padding: 10px";
+		}
+		
+		//jQuery实现登录按钮
+		function doSubmit(){
+			// var username = document.getElementById("username");  //代表了input用户名输入框
+			var username = $("#username");
+			
+			// var msg = document.getElementById("msg");
+			var msg = $("#msg");
+			
+			// msg.innerText = username.value + "，登录成功";   //内部文字
+			//替代innerText使用text()方法，替代value使用val()方法
+			msg.text( username.val()+"，登录成功" );  //修改了div的内容  
+			
+			// msg.style = 
+			// "display: block; color: white; background-color: #008000;margin: 10px;padding: 10px";
+			//jQuery，专门支持css设置，方法，两个值key,value
+			msg.css("display", "block");  	//显示div
+			msg.css("color", "white");		//设置白色
+			msg.css("background-color", "#008000");		//设置背景色
+			msg.css("margin", "10px 0px 10px 0px");		//外围空白
+			msg.css("padding", "10px");	//内部空白
+			msg.css("border-radius", 5);
+		}
+		
+		//清空输入框
+		function jsdoClear(){
+			document.getElementById("username").value = '';  //清空值，单引号字符串
+			document.getElementById("password").value = "";	//清空值，双引号字符串
+		}
+
+		//jQuery语法来实现，简化
+		function doClear(){
+			//置空
+			//选择器selector（标签直接写名字，class属性.，id属性#）
+			//函数，规范：val()
+			$("#username").val('');
+			$("#password").val("");
+		}
+	</script>
+</html>

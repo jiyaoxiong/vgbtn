@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>测试DOM数解析网页元素</title>
+		<script type="text/javascript">
+					function method(){
+						// 1、获取id=“a”
+						var a = document.getElementById("a");
+						a.innerHTML = "hello";
+						console.log(a.innerHTML);
+					}
+				</script>
+	</head>
+	<body>
+		<div id="a">文本1</div>
+		<div class="btn">文本2</div>
+		<div name="name">文本3</div>
+		
+		<a href="http://www.baidu.com" id="b" onclick="method();">链接1</a>
+		<a href="#" class="btn1">链接2</a>
+		
+		<p class="btn3">段落1</p>
+		<p>段落2</p>
+	</body>
+</html>
+

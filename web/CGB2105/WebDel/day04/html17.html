@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>jq事件练习</title>
+		<!-- 引入jQuery文件 -->
+		<script src="../res/jquery-1.8.3.min.js"></script>
+		
+		<!-- 使用jQuery语法 $(选择器).xxx(功能)-->
+		<script type="text/javascript">
+			//文档就绪:保证元素都被加载成功
+			$(function(){
+				// 练习1：单击id=d1,隐藏id=p1的文本
+				$("#d1").click(function(){
+					$("#p1").hide();
+				})
+			});
+			// 练习2：双击class="dd"的元素，给div加背景色
+			$(function(){
+				$(".dd").dblclick(function(){
+					$("div").css("background","green");
+				})
+				
+				// 练习3：鼠标进入id=“d1”的div，隐藏有href属性的元素
+				$("#d1").mouseenter(function(){
+					$("[href]").hide();
+				})
+			})
+		</script>
+	</head>
+	<body>
+		<div id="d1">文本1</div>
+		<div class="dd">文本2</div>
+		<div>文本</div>
+		<div class="dd">文本3</div>
+		
+		<p id="p1">段落1</p>
+		<p>段落1</p>
+		
+		<a class="dd">标签a</a>
+		<a href="#">链接1</a>
+		<a href="#">链接2</a>
+	</body>
+</html>
+

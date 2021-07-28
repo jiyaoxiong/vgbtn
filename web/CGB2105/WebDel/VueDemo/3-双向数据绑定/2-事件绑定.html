@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>数据显示</title>
+	</head>
+	<body>
+		<div id="app">
+			<!-- 需求：实现数据自增操作 -->
+			<h3>数值：{{num}}</h3>
+			<br />
+			<button v-on:click="num++">自增</button>
+			<button @click="num--">自减（简化）</button>
+			<button @click="addNum">平方处理</button>
+			<button @click="subtruNum()">减法</button>
+		</div>
+		<!-- 1.导入JS文件 -->
+		<script src="../js/vue.js" type="text/javascript" charset="utf-8"></script>
+		
+		<!-- 3.创建VUE对象 -->
+		<script>
+			const APP = new Vue({
+				el: "#app",
+				data: {
+					num: 2
+				},
+				methods: {
+					addNum: function(){
+						this.num=this.num*this.num
+					},
+					subtruNum(){
+						this.num--
+					}
+				}
+			})
+		</script>	
+	</body>
+</html>

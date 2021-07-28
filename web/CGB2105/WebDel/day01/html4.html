@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>测试 表单标签</title>
+	</head>
+	<body>
+		<!-- 默认会把数据在地址栏中拼接---get方式提交数据
+			http://127.0.0.1:8848/WebDel/day01/html4.html?usename=5&password=1&nicheng=1&sex=0&play=1&play=0&play=2&city=%E5%8C%97%E4%BA%AC
+			get提交：展示数据明确，但缺乏安全性，地址栏太长
+			post提交：安全性对数据没有上限，坏处是看不见数据
+		 -->
+		<form method="post" action="http://www.baidu.com">
+			<table border="1px" bgcolor="antiquewhite" bordercolor="red" cellspacing="0">
+				<td colspan="2">
+					<h1 align="center">注册表单</h1>
+				</td>
+				<tr>
+					<td>用户名：</td>
+					<td>
+						<input type="text" name="usename"/>
+					</td>
+				</tr>
+				<tr>
+					<td>密码：</td>
+					<td>
+						<input type="password" name="password"/>
+					</td>
+				</tr>
+				<tr>
+					<td>确认密码：</td>
+					<td>
+						<input type="password" />
+					</td>
+				</tr>
+				<tr>
+					<td>昵称：</td>
+					<td>
+						<input type="text" name="nicheng"/>
+					</td>
+				</tr>
+				<tr>
+					<td>邮箱：</td>
+					<td>
+						<input type="email" />
+					</td>
+				</tr>
+				<tr>
+					<td>性别：</td>
+					<td>
+						<!-- radio拥有相同的name值才能实现单选，否则即为双选，且必须设置value属性，否则永远提交on -->
+						<input type="radio" name="sex" value="1"/>男
+						<input type="radio" name="sex" value="0"/>女
+					</td>
+				</tr>
+				<tr>
+					<td>爱好：</td>
+					<td>
+						<input type="checkbox" name="play" value="1"/>篮球
+						<input type="checkbox" name="play" value="0"/>足球
+						<input type="checkbox" name="play" value="2"/>乒乓球
+					</td>
+				</tr>
+				<tr>
+					<td>城市</td>
+					<td>
+						<select name="city">
+							<option>北京</option>
+							<option>上海</option>
+							<option>南京</option>
+							<option>杭州</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td>头像</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>验证码</td>
+					<td>
+						<input type="text" />
+						<img src="a.png" >
+						<input type="button" value="点我换一张" />
+					</td>
+				</tr>
+				<tr>
+					<td>自我描述</td>
+					<td>
+						<textarea >请输入自我描述~~~</textarea>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2" align="center">
+						<input type="submit" value="提交" />
+						<input type="button" value="重置" />
+					</td>
+				</tr>
+			</table>
+		</form>
+	</body>
+</html>

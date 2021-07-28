@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>京东某个商品价格信息</title>
+		<script src="js/jquery.min.js"></script>
+	</head>
+	<body>
+		<div>
+			商品编号：<span id="id"></span>
+		</div>
+		<div>
+			商品价格：<span id="price"></span>
+		</div>
+	</body>
+	<script>
+		//1.实现写死json字符串，解析展现到页面上
+		// var jsonstr = '[{"p":"1799.00","op":"17999.00","cbf":"0","id":"J_100010378153","m":"100000.00"}]';
+		
+		//2. 获取价格和编号
+		// var obj = JSON.parse(jsonstr);	//把字符串转换js对象
+		
+		// 发起ajax请求
+		$.ajax({
+			type:"get",
+			url:"https://p.3.cn/prices/mgets?skuIds=J_100013651684",
+			dataType:"jsonp",
+			success:function(data){
+				console.log(data);
+				var obj = data;
+				
+				var price = obj[0].p; //获取到数组第一条记录，访问p属性
+				var id = obj[0].id;
+				
+				console.log(price);
+				console.log(id);
+				
+				//3. 把内容写到页面，进行展现
+				$("#id").text(id);		//span标签属性写法
+				$("#id").css("color", "blue"); //渲染render
+				$("#price").text(price).css("color","red");		//链式编程
+			}
+		});
+	</script>
+</html>

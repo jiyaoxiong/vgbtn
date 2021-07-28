@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>汽车对象</title>
+	</head>
+	<body>
+		<h1>保时捷718 Cayman T，红色，641000元</h1>
+		
+		<script>
+			//js定义对象
+			//var car = new Object();  //标准写法
+			//var car = {}; //代表js对象，空 function() {}函数，[]数组 
+			var car = {
+				//属性k,v结构，语法：key: value，多个属性之间使用逗号分割
+				name: "保时捷719",	//; 这个{}是js对象写法，不是函数，不是块，不能用分号
+				note: "这个车很不错!",
+				toString: function(){  //初始化时定义一个方法
+					return this.name+","+this.note; //this代表car对象，才能访问里面属性
+				}
+			}
+			
+			//定义属性（动态添加属性）
+			//car.name = "保时捷718";	//动态添加属性
+			console.log( car );  //直接打印对象，直接观察
+			
+			car.type = "Cayman T";
+			car.color = "红色";
+			car.price = 641000;
+			
+			//动态添加函数
+			car.show = function(){
+				return this.name+", "+this.type+", "+this.color+", "
+				+this.price+", "+this.note;
+			}
+			
+			console.log( car );
+			console.log( car.toString() );	//调用函数
+			console.log( car.show() );
+		</script>
+	</body>
+</html>
+

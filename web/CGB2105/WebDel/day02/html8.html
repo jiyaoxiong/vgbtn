@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>测试js</title>
+		<script>
+			// 弹出100
+			alert(100);
+			// 确认框
+			prompt("请输入年龄：")
+		</script>
+	</head>
+	<body>
+		<!-- js的目的在于使网页动起来--写法1：行内js 
+			js是基于对象的事件驱动的脚本语言。
+			事件驱动是指：给网页中的不同元素，添加了各种触发的方式
+			onclick:单击 ondblclick：双击 onmouseenter：鼠标进入 onmouseleave：鼠标划出
+			alert：弹出框 prompt：输入框 confirm：确认框
+			
+			写法2：在HTML中嵌入js
+		-->
+		
+		<a href="#" onclick="alert()">单击弹框</a>
+		<a href="#" onclick="prompt()">单击输入框</a>
+		<a href="#" onclick="confirm()">单击</a>
+		
+		<a href="#" ondblclick="alert(100)">双击弹框</a>
+		<a href="#" onmouseenter="alert(1000)">鼠标划入弹框</a>
+		<a href="#" onmouseleave="alert(10)">鼠标划出弹框</a>
+	</body>
+</html>

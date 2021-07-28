@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>学生信息关系系统</title>
+	</head>
+	<body>
+		<form action="" method="get">
+			<table border="0" cellspacing="0" cellpadding="0">
+				<tr>
+					<h1>学生信息管理系统MIS</h1>
+				</tr>
+				<tr>
+					<td>姓名：</td>
+				</tr>
+				<tr>
+					<td>
+						<input type="text" name="name" id="name" placeholder="请输入姓名"/>
+					</td>
+				</tr>
+				<tr>
+					<td>年龄：</td>
+				</tr>
+				<tr>
+					<td>
+						<input type="number" name="age" id="age" value="age" placeholder="请输入姓名"/>
+					</td>
+				</tr>
+				<tr>
+					<td>性别：（单选框）</td>
+				</tr>
+				<tr>
+					<td>
+						<input type="radio" name="sex" id="sex" value="0" />男
+						<input type="radio" name="sex" id="sex" value="1" />女
+					</td>
+				</tr>
+				<tr>
+					<td>爱好：（多选）</td>
+				</tr>
+				<tr>
+					<td>
+						<input type="checkbox" name="hobby" id="hobby" value="1" />乒乓球
+						<input type="checkbox" name="hobby" id="hobby" value="2" />爬山
+						<input type="checkbox" name="hobby" id="hobby" value="3" />游泳
+						<input type="checkbox" name="hobby" id="hobby" value="4" />跑步
+					</td>
+				</tr>
+				<tr>
+					<td>学历：（下拉框）</td>
+				</tr>
+				<tr>
+					<td>
+						<select name="study">
+							<option value="1">小学</option>
+							<option value="2">中学</option>
+							<option value="3">大专</option>
+							<option value="4">本科</option>
+						</select>
+					</td>
+				</tr>
+			</table>
+			
+			<div>
+				<input type="submit" value="提交" />
+				<input type="button" value="取消" />
+			</div>
+		</form>
+	</body>
+</html>

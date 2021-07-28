@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>DOM解析</title>
+
+		<!-- js -->
+		<script>
+			function a() {
+				/* 按id获取,返回1个 */
+				var x = document.getElementById("div1");
+				x.innerHTML = "<h1>你好div</h1>";
+
+				/* 按name属性值获取,返回多个*/
+				var y = document.getElementsByName("div2");
+				console.log(y); //NodeList
+				y[0].innerHTML = "hello js...";
+
+				/* 按class属性值获取,返回多个*/
+				var z = document.getElementsByClassName("span1");
+				console.log(z); //HTMLCollection
+				z[0].innerText = "<p>我变了</p>"
+
+				/* 按照标签名获取,返回多个 */
+				var m = document.getElementsByTagName("div");
+				console.log(m); //HTMLCollection
+				m[1].style.fontSize = 30 + "px";
+			}
+		</script>
+	</head>
+	<body>
+		<div id="div1" onclick="a();">我是div1</div>
+		<div namfile:///F:/JavaDel/jquery-1.8.3.min/jquery-1.8.3.min.jse="div2" onclick="a();">我是div2</div>
+		<span class="span1">我是span1</span>
+		<span class="span1">我是span2</span>
+		<a name="div2" id="a1">我是a</a>
+
+		<!-- js事件: -->
+		<a href="#" onclick="method();">单击触发js</a>
+		<a href="#" ondblclick="method2();">双击触发js</a>
+		<a href="#" onmouseenter="method3();">滑过触发js</a>
+		<a href="#" onmouseleave="method4();">滑走触发js</a>
+		<button onkeydown="alert(1);">点我</button>
+	</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>永和小票</title>
+		<!-- 全局的样式配置，习惯的位置 
+			 body代表整个页面的字体统一大小 
+		-->
+		<style>
+			body{
+				font-size:8px;/* 字体的大小,8个像素 */
+				/* border:1px solid red; */
+				width: 265px;;
+			}
+			
+			.me{/* class属性公用 */
+				padding-left: 90px;//css样式
+			}
+			#please{
+				font-size: 22px;
+				font-weight: bold;
+				/* color: #ff0000; */
+			}
+			.note{
+				/* padding-top: 20px; 上空 */
+				/* padding-bottom: 15px; 下空 */
+				margin-top: 20px;
+				margin-bottom: 15px;
+			}
+		</style>
+	</head>
+	<body>
+		<div>顾客联</div>
+		<br />
+			<div id="please">请您留意取餐账单号</div>
+			<div class="me">自取顾客联</div>
+			<div>永和大王（北三环西路店）</div>
+			<div>010-62112313</div>
+			
+			<div class="me">--结账单--</div>
+			<div class="please">账单号：P123456</div>
+			<div>账单类型：堂食</div>
+			<div>人数：1</div>
+			<div>收银员：张静</div>
+			<div>开单时间：2018-04-17 07:24:11</div>
+			<div>结账时间：2018-04-17 07:24:22</div>
+			
+			<hr style="border:1px dashed;" />
+			
+			<!-- 表头：表头行th，普通行tr，单元格td -->
+			<table border="0">
+				<tr>
+					<!-- 属性，区别于css样式 -->
+					<td width="30" align="center">数量</td>
+					<td width="150" align="center">品项</td>
+					<td width="50" align="center">金额</td>
+				</tr>
+				<tr>
+					<td valign="top">1</td>
+					<td>
+						玉米肉松蛋饼2P<br />
+						1 X -- 玉米肉松蛋饼<br />
+						1 X -- 现磨豆浆<br />
+					</td>
+					<td valign="top" align="right">8.00</td>
+				</tr>
+			</table>
+			
+			<hr style="border:1px dashed;" />
+			
+			<table border="0">
+				<tr>
+					<td width="40">合计</td>
+					<td width="194" align="right">8.00</td>
+				</tr>
+				<tr>
+					<td>微支付</td>
+					<td align="right">8.00</td>
+				</tr>
+			</table>
+			
+			<hr style="border:1px dashed;" />
+			<div>打印时间：2018-04-17 07:24:23</div>
+			
+			<hr style="border : 1px dashed ;" />
+			<div class="note">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;根据相关税法规定，电子发票的开票日期同网上申请电子发票的日期，如您需要当日的电子发票请务必在消费当日通过扫描下方二维码，根据指引步骤开具您的增值税电子普通发票。此二维码30天有效，扫描时请保持小票平整。</div>
+			
+			<!-- 相对路径访问图片 -->
+			<img src="../imag/2.png" style="padding-left: 58px;" >
+			
+			<div>官网：www.yonghe.com.cn</div>
+			<div>加盟电话：86-21-1234789</div>
+			
+			<br />
+			<br />
+	</body>
+</html>

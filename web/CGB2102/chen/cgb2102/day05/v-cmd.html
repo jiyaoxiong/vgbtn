@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		
+		<script src="js/vue.js"></script>
+		<script src="js/jquery.min.js"></script>
+		<style>
+			[v-cloak]{
+				display:none;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>{{address}}</h1>
+		
+		<div id="app" v-cloak> <!-- v-cloak指令，解决页面闪现问题 -->
+			<h2>{{address}}</h2>
+			
+			<!-- vue实现双向绑定:v-model -->
+			<input type="text" id="address" v-model="address"/>
+			
+			<p>{{name}}, {{age}}</p>
+			<p>{{hobby}}, {{hobby.length}}</p>
+			<p>第一个元素：{{hobby[0]}}
+				最后一个元素：{{ hobby[ hobby.length-1 ] }}
+			</p>
+			<!-- v-for循环指令，for(String s: arrays) 
+				hobby是数组，o每次遍历当前值
+				o,i in hobby，o代表当前值，i代表索引
+			-->
+			<p>
+				<span v-for="o in hobby">{{o}} </span>
+			</p>
+			<p>
+				<span v-for="o,i in hobby">{{i}}-{{o}} </span>
+			</p>
+			
+			<!-- 对象方式，对象.操作符，来访问它下面属性 -->
+			<p>{{girl}}</p>
+			<p>{{girl.name}}, {{girl.age}}</p>
+			
+			<!-- 判断，如果age年龄>=18成年，<18未成年
+				如果判断true就显示后面内容，false就不展现
+			 -->
+			 <p v-show="girl.age>=18">成年</p>
+			 <p v-show="girl.age<18">未成年</p>
+			 
+			<p v-if="girl.age>=18">成年</p>
+			<p v-if="girl.age<18">未成年</p>
+			
+			<p v-if="money>=1900">一线不差钱</p>
+			<p v-else-if="money>=1200">二线不差钱</p>
+			<p v-else-if="money>=600">三线不差钱</p>
+			<p v-else>屌丝</p>
+			
+			<!-- 往常插值表达式写在页面，这是写在属性中
+				错误原因：它把这个整体当做字符串，而不是插值表达式
+				解决办法：去掉括号，在属性前面加:冒号
+					告诉vue这个属性后面值是变量，不是字符串，必须解析
+					
+				v-bind
+			 -->
+			链接：<!-- a href="{{url}}" target="_blank">java培优</a -->
+			<a v-bind:href="url" target="_blank">java培优</a>
+			
+			<!-- vue事件 v-on指令
+				创建vue方法 show()，打印控制台
+			 -->
+			<br>按钮：<button onclick="alert('点击有惊吓')">点我</button>
+			<br>按钮：<button @click="show">点我2</button>
+			
+			<br><br><br><br><br><br>
+		</div>
+	</body>
+</html>
+
+<script>
+	/* 创建vue对象，参数js对象，固定：el/data 
+		hobby数组
+		
+		不差钱：
+		一线：1900w
+		二线：1200w
+		三线：600w
+		data数据区，methods方法区，严格区分
+	*/
+	var vm = new Vue({
+		el: "#app",
+		data: {
+			address: "北京颐和园",
+			name: "王强",
+			age: 28,
+			money: 60,
+			url: "http://act.codeboy.com",
+			hobby: ["红色", "绿色", "蓝色"],
+			girl: {
+				name: "肉丝",
+				age: 16
+			}
+		},
+		methods:{
+			show: function(){   //定义函数，点击按钮执行show方法
+				console.log("vue show fun");
+			}
+		}
+	});
+</script>

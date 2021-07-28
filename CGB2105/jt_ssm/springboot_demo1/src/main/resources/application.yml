@@ -1,0 +1,12 @@
+#数据结构 key-value
+#数据类型 String、value
+#语法：
+#     1、key：(空格)value
+#     2、key与key之间的层级关系，注意缩进
+#     3、字符编码格式：UTF-8
+#     4、鉴于层级，可读性较properties文件更加便捷
+server:
+  port: 8095
+
+User:
+  a: 3

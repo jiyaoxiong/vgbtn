@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>学生信息管理系统</title>
+	</head>
+	<body>
+		<form method="get">
+			<h1>学生信息管理系统MIS</h1>
+			<div >
+				<label>姓名：</label>
+				<input type="text" name="name" id="name" placeholder="请输入姓名"/>
+			</div>
+			<div>
+				<label>年龄：</label>
+				<input type="number" name="age" id="age" value="age" placeholder="请输入年龄"/>
+			</div>
+			<div >
+				<label>性别：(单选框)</label>
+				<input type="radio" name="sex" id="sex" value="0" />男
+				<input type="radio" name="sex" id="sex" value="0" />女
+			</div>
+			<div>
+				<label>爱好：(多选框)</label>
+				<input type="checkbox" name="hobby" id="hobby" value="1" />爬山
+				<input type="checkbox" name="hobby" id="hobby" value="2" />游泳
+				<input type="checkbox" name="hobby" id="hobby" value="3" />乒乓球
+			</div>
+			<div>
+				<label>学历：(下拉框)</label>
+				<select name="study">
+					<option value="1">小学</option>
+					<option value="2">中学</option>
+					<option value="3">大专</option>
+					<option value="4">本科</option>
+					<option value="5">硕士</option>
+				</select>
+			</div>
+			<div>
+				<label>入学日期：</label>
+				<input type="date" name="date" id="date" value="date" />
+			</div>
+			<div>
+				<input type="submit" value="提交" />
+				<input type="button" value="取消" />
+			</div>
+		</form>
+	</body>
+</html>

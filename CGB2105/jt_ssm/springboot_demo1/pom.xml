@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <!--项目Maven的基本信息-->
+    <groupId>com.jt</groupId>
+    <artifactId>springboot_demo1</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>springboot_demo1</name>
+    <description>Demo project for Spring Boot</description>
+
+    <!--
+        springboot：整合SSM，简化常规框架的使用
+        原则：开箱即用
+        parent的主要作用：
+                1、springboot在内部几乎兼容了当下所有的框架
+                2、springboot官网已经将所有兼容版本进行了定义
+                （几乎解决了版本冲突问题），后续几乎不写版本号
+            概括：parent标签中管理其他的项目版本信息
+    -->
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.5.2</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
+
+    <properties>
+        <java.version>1.8</java.version>
+        <!--跳过测试类打包-->
+        <skipTests>true</skipTests>
+    </properties>
+
+    <!--原则：按需导入-->
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <!--springboot的启动器-->
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-devtools</artifactId>
+            <version>2.4.8</version>
+        </dependency>
+
+        <!--引入lombok-->
+        <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+        </dependency>
+
+
+    </dependencies>
+
+    <!--springboot项目与maven整合的一个插件
+        可以通过插件，执行项目的打包、测试、文档生成等操作
+        注意：该插件不能省略，否则在启动时会报错：没有主清单信息
+    -->
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>

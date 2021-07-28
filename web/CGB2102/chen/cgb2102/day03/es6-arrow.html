@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>ES6箭头函数</title>
+		<script>
+			//1、无参函数
+			var js0 = function(){  //js无参函数定义
+				console.log("js0 无参函数调用");
+			}
+			js0();  //调用函数
+			
+			//箭头函数，如果{}中只有一句话，这个大括号可以省略
+			// var es60 = () => {
+			// 	console.log("es60 箭头函数无参调用");
+			// }
+			var es60 = () => console.log("es60 箭头函数无参调用");
+			es60();
+			
+			//2、一个参数函数
+			var js1 = function(arg){
+				return arg;
+			}
+			var s1 = js1("js1 一个参数函数");
+			console.log(s1);
+			
+			// var es61 = (arg) => {
+			// 	return "es61 "+arg;
+			// }
+			//变成箭头函数时，不需要return关键字
+			//如果只有一个参数，小括号可以省略
+			var es61 = arg => arg;
+			var e1 = es61("es61 一个参数函数");
+			console.log(e1);
+			
+			//3、两个参数函数
+			var js2 = function(x,y){
+				return x+y;
+			}
+			console.log( js2(10,20) );
+			
+			// var es62 = (x,y) => {
+			// 	return x+y;
+			// }
+			var es62 = (x,y) => x+y;
+			console.log(es62(1000,200));
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

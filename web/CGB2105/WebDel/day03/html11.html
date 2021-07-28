@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>测试js数组</title>
+		<!-- js的数组 
+			java中数组特点：长度不能改变，数组类型单一
+			js中，其长度可以改变，作为弱类型语言，可添加不同类型的数据
+		-->
+		<script type="text/javascript">
+			// 1、定义数组
+			var arr1 = new Array();
+			var arr2 = [];
+			arr1 = new Array(10,1.1,"string",'a',true);
+			console.log(arr1.length);//获取arr1数组的长度
+			console.log(arr1);//展示arr1数组的内容
+			
+			var b = [];
+			b = [1,2,3,"jack",1.1];
+			for (var i=0;i<b.length;i++) {
+				console.log(b[i]);//根据下标打印数据
+			}
+			
+			// 求数组里的偶数和
+			var c = [],
+			c = [1,2,3,4,5,6,7,8,10];
+			var sum = 0;
+			for (var i = 0; i < c.length; i++) {
+				if (c[i]%2==0) {
+					sum = sum+c[i];
+				}
+			}
+			console.log("偶数和为：" + sum);
+			
+			//for..in
+			var sum = 0;
+			for (var i in c) {
+				console.log("forin:"+c[i])
+				if (c[i]%2==0) {
+					sum = sum+c[i];
+				}
+			}
+			console.log("forin求和："+sum)
+		</script>
+	</head>
+	<body>
+	</body>
+</html>
